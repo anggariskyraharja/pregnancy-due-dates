@@ -1,0 +1,8 @@
+{
+  "name": "pregnancy-due-dates",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "05791cda"
+}
