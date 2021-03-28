@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Pregnancy Due Dates</string>
+    <string name="title_activity_main">Pregnancy Due Dates</string>
+    <string name="package_name">com.imedicalapps.pregnancyduedates</string>
+    <string name="custom_url_scheme">com.imedicalapps.pregnancyduedates</string>
+</resources>

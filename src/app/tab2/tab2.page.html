@@ -1,17 +1,130 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
+<ion-header [translucent]="true" >
+  <ion-toolbar >
+    <ion-title >
+    Gestation & Due Dates
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-item class="color11a">
+    <ion-text>
+      <p>Calculate gestational age & due dates based on conception date.</p>
+    </ion-text>
+  </ion-item>
+  <ion-item-divider class="color7"></ion-item-divider>
+  <ion-list>
+    <ion-item class="color2a">
+      <ion-label>Today date:</ion-label>
+      <ion-datetime [(ngModel)]="from" placeholder="Pick date"></ion-datetime>
+    </ion-item>
+    <ion-item class="color2a">
+      <ion-label>Conception date:</ion-label>
+      <ion-datetime [(ngModel)]="to" placeholder="Pick date"></ion-datetime>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" (click)="calculate()" fill="outline" class="color11">Calculate<ion-icon slot="end" name="checkmark-circle-outline"></ion-icon></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" (click)="clear()" fill="outline" class="color33a">Clear<ion-icon slot="end" name="close-circle-outline"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list *ngIf="edd">
+    <ion-item class="color4">
+      <ion-label>Estimated Due Date:</ion-label>
+      <ion-text><b>{{edd | date}}</b></ion-text>
+    </ion-item>
+    <ion-item class="color11a">
+      <p>You are <b>{{week}} weeks</b> and <b>{{days}} days</b> pregnant.</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <p>There are <b>{{left}} days</b> until your due date.</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <p>You are <b>{{percent}}%</b> of the way there.</p>
+    </ion-item>
+  <ion-item-divider class="color7"></ion-item-divider>
+    <ion-button expand="full" class="color4">MILESTONES</ion-button>
+    <ion-item class="color6a">
+      <ion-icon src="assets/icon/milestone2.svg"></ion-icon>
+      <p> First day of LMP (approximately)</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{conceive | date}}</ion-text>
+    </ion-item>
+    <ion-item class="color6a">
+    <ion-icon src="assets/icon/milestone3.svg"></ion-icon>
+      <p>Positive pregnancy test</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{pregnancytest | date}}</ion-text>
+    </ion-item>
+    <ion-item class="color6a">
+      <ion-icon src="assets/icon/milestone4.svg"></ion-icon>
+      <p>Baby’s heart begins beating</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{babyheart | date}}</ion-text>
+    </ion-item>
+    <ion-item class="color6a">
+      <ion-icon src="assets/icon/milestone5.svg"></ion-icon>
+      <p>Peak of morning sickness</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{morningsickness | date}}</ion-text>
+    </ion-item>
+    <ion-item class="color6a">
+      <ion-icon src="assets/icon/milestone6.svg"></ion-icon>
+      <p>First doctor appointment</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{appointment | date}}</ion-text>
+    </ion-item>
+    <ion-item class="color6a">
+      <ion-icon src="assets/icon/milestone7.svg"></ion-icon>
+      <p>Start of 2nd trimester</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{second | date}}</ion-text>
+    </ion-item>
+    <ion-item class="color6a">
+      <ion-icon src="assets/icon/milestone8.svg"></ion-icon>
+      <p>All major organs are formed</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{organ | date}}</ion-text>
+    </ion-item>
+    <ion-item class="color6a">
+      <ion-icon src="assets/icon/milestone9.svg"></ion-icon>
+      <p>Hear baby's heart with a fetoscope</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{heart | date}}</ion-text>
+    </ion-item>
+    <ion-item class="color6a">
+      <ion-icon src="assets/icon/milestone10.svg"></ion-icon>
+      <p>Best week for ultrasound</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{ultrasound | date}}</ion-text>
+    </ion-item>
+    <ion-item class="color6a">
+      <ion-icon src="assets/icon/milestone11.svg"></ion-icon>
+      <p>Start of 3rd trimester</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{third | date}}</ion-text>
+    </ion-item>
+    <ion-item class="color6a">
+      <ion-icon src="assets/icon/milestone12.svg"></ion-icon>
+      <p>Welcome to the world baby</p>
+    </ion-item>
+    <ion-item class="color11a">
+      <ion-text>{{edd | date}}</ion-text>
+    </ion-item>
+  </ion-list>
+</ion-list>
 </ion-content>

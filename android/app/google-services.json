@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "956350710364",
+    "project_id": "pregnancy-due-dates",
+    "storage_bucket": "pregnancy-due-dates.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956350710364:android:2e2d776d88ad91a87cdc99",
+        "android_client_info": {
+          "package_name": "com.imedicalapps.pregnancyduedates"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956350710364-9fofaal7pqgmhe1rusg5rorae2cjtp35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAk5znx_srSqSVFXD5i5tDyALtfKuv0Gc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "956350710364-9fofaal7pqgmhe1rusg5rorae2cjtp35.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "956350710364-r76s872i588mtn58kn8m1hsac3944jhu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.imedicalapps.pregnancyduedates"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

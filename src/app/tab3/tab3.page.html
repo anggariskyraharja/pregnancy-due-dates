@@ -1,17 +1,71 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
+<ion-header [translucent]="true" >
+  <ion-toolbar >
+    <ion-title >
+    Ultrasound Biometry
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-item class="color11">
+    <ion-text>
+      <p>Calculate gestational age & due dates based on ultrasound biometry.</p>
+    </ion-text>
+  </ion-item>
+  <ion-item-divider class="color7"></ion-item-divider>
+  <ion-list>
+    <ion-radio-group name="equation" value="eq1" (ionChange)="check($event)">
+      <ion-item class="color5">
+        <ion-label >Selection:</ion-label>
+      </ion-item>
+      <ion-item class="color2a">
+        <p>Crown Rump Length</p>
+        <ion-radio slot="start" value="eq1" ionselect></ion-radio>
+      </ion-item>
+      <ion-item class="color2a">
+        <p>Biparietal Diameter</p>
+        <ion-radio slot="start" value="eq2"></ion-radio>
+      </ion-item>
+      <ion-item class="color2a">
+        <p>Head Circumference</p>
+        <ion-radio slot="start" value="eq3"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <ion-item>
+      <p><i>For 1st trimester use crown rump length. For 2nd and 3rd trimester, use biparietal diameter or head circumference.</i></p>
+    </ion-item>
+    <ion-item class="color2">
+      <ion-label>USG date:</ion-label>
+      <ion-datetime [(ngModel)]="from" placeholder="Pick date"></ion-datetime>
+    </ion-item>
+    <ion-item class="color2">
+      <ion-label>Measurement:</ion-label>
+      <ion-input type="number" [(ngModel)]= "num" placeholder="in mm"></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" (click)="calculate()" fill="outline" class="color11">Calculate<ion-icon slot="end" name="checkmark-circle-outline"></ion-icon></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" (click)="clear()" fill="outline" class="color33">Clear<ion-icon slot="end" name="close-circle-outline"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-list>
+    <ion-list *ngIf="edd">
+    <ion-item class="color4">
+      <ion-label>Estimated Due Date:</ion-label>
+      <ion-text><b>{{edd | date}}</b></ion-text>
+    </ion-item>
+    <ion-item class="color2a">
+      <p>You are <b>{{week}} weeks</b> and <b>{{days}} days</b> pregnant.</p>
+    </ion-item>
+    <ion-item class="color2a">
+      <p>There are <b>{{left}} days</b> until your due date.</p>
+    </ion-item>
+    <ion-item class="color2a">
+      <p>You are <b>{{percent}}%</b> of the way there.</p>
+    </ion-item>
+    </ion-list>
 </ion-content>

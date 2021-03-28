@@ -24,3 +24,148 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+:root {
+    --ion-color-primary: #DB1F48;
+    --ion-background-color: #FFFFFF;
+}
+
+ion-toolbar {
+    --background: #DB1F48;
+    --border-style: solid;
+    --border-color: #DB1F48;
+    --color: #ffffff;
+}
+ion-label {
+    font-size: 1.0em !important;
+}
+ion-radio {
+    --color-checked: #DB1F48;
+}
+.color1 {
+    --background: #84DCC6;
+    --border-style: solid;
+    --border-color: #84DCC6;
+    --color: #000000;
+    text-align: center;
+}
+.color11 {
+    --background: #FFADAD;
+    --border-style: solid;
+    --border-color: #FFADAD;
+    --color: #000000;
+    text-align: center;
+}
+.color11a {
+  --background: #FFC6FF;
+  --border-style: solid;
+  --border-color: #FFC6FF;
+  --color: #000000;
+  text-align: center;
+}
+.color1111 {
+    --background: #98C1D9;
+    --border-style: solid;
+    --border-color: #98C1D9;
+    --color: #000000;
+    text-align: center;
+}
+.color2 {
+    --background:#FFD6A5;
+    --border-style: solid;
+    --border-color: #FFD6A5;
+    --color: #000000;
+}
+.color2a {
+  --background:#CAFFBF;
+  --border-style: solid;
+  --border-color: #CAFFBF;
+  --color: #000000;
+}
+.color3 {
+    --background: #9BF6FF;
+    --border-style: solid;
+    --border-color: #000;
+    --color: #000000;
+}
+.color33 {
+  --background: #FFD6A5;
+  --border-style: solid;
+  --border-color: #000;
+  --color: #000000;
+}
+.color33a {
+  --background: #CAFFBF;
+  --border-style: solid;
+  --border-color: #000;
+  --color: #000000;
+}
+.color4 {
+    --background: #DB1F48;
+    --border-style: solid;
+    --border-color: #DB1F48;
+    --color: #ffffff;
+    text-align: center;
+}
+.color5 {
+  --background: #FDFFB6;
+  --border-style: solid;
+  --border-color: #FDFFB6;
+  --color: #000000;
+
+  text-align: center;
+}
+.color6 {
+  --background: #FFD6A5;
+  --border-style: solid;
+  --border-color: #FFD6A5;
+  --color: #000000;
+
+  text-align: center;
+}
+.color6a {
+  --background: #CAFFBF;
+  --border-style: solid;
+  --border-color: #CAFFBF;
+  --color: #000000;
+  text-align: center;
+}
+.color7 {
+    --background: #fff;
+    --border-style: solid;
+    --border-color: #fff;
+    --color: #fff;
+
+    text-align: center;
+}
+.color8 {
+    --background: #48BCD1;
+    --border-style: solid;
+    --border-color: #48BCD1;
+    --color: #000000;
+}
+.color9 {
+    --background: #45B08C;
+    --border-style: solid;
+    --border-color: #45B08C;
+    --color: #000000;
+}
+.color10 {
+    --background: #15998E;
+    --border-style: solid;
+    --border-color: #15998E;
+    --color: #000000;
+}
+
+.color12 {
+    --background: #FE4A49;
+    --border-style: solid;
+    --border-color: #FE4A49;
+    --color: #ffffff;
+}
+.color13 {
+    --background: #EA2B1F;
+    --border-style: solid;
+    --border-color: #EA2B1F;
+    --color: #ffffff;
+}
